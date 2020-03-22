@@ -14,7 +14,7 @@ def download_file(url, file_path):
 def download_github_code(path):
     repo = 'kaggle/blob'
     branch = 'master'
-    url = 'https://raw.githubusercontent.com/migai/{}/{}/{}'
+    url = 'https://github.com/migai/{}/{}/{}'
     file_path = path.rsplit("/")[-1]
     download_file(url.format(repo, branch, path), file_path)
 
@@ -22,7 +22,7 @@ def download_github_code(path):
 def download_github_with_pd_csv(path, df_name):
     repo = 'kaggle/blob'
     branch = 'master'
-    url = 'https://raw.githubusercontent.com/migai/{}/{}/{}'
+    url = 'https://github.com/migai/{}/{}/{}'
     file_path = path.rsplit("/")[-1]
     download_file(url.format(repo, branch, path), file_path)
 	df_name = pd.read_csv(file_path)
